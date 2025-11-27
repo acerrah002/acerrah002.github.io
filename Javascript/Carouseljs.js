@@ -4,27 +4,27 @@ const classes = [
   {
     image: "/images/Randompc2 (1).jpeg",
     description: "Custom-built computers tailored for high performance.",
-    link: "test.html"
+    link: "Pc_builds.html"
   },
   {
     image: "/images/3dprinted (1).jpg",
     description: "3D Printing, prototyping and manufacturing",
-    link: "test.html"
+    link: "3DPrinting.html"
   },
   {
     image: "/images/computer_repair (1).jpg",
     description: "PC/Laptop Maintenance & Repair.",
-    link: "test.html"
+    link: "PC_Repair.html"
   },
   {
     image: "/images/fob_keys (1).jpg",
     description: "Precision key fob cloning for all models.",
-    link: "test.html"
+    link: "Fob_Keys.html"
   },
   {
     image: "/images/esp32 (1).jpg",
     description: "Robotics projects for innovative automation solutions.",
-    link: "test.html"
+    link: "Robotics.html"
   }
 ];
 
