@@ -8,7 +8,7 @@ const HeaderHTML = `
                 <li><a href="fobkeys.html" >Fob keys</a></li>
                 <li><a href="maintenance.html" >Maintenance & Repair</a></li>
                 <li><a href="3DPrinting.html" >3DPrinting</a></li>
-                <li><a href="PC_Builds.html">Pc Builds</a></li>
+                <li><a href="Pc_builds.html">Pc Builds</a></li>
                 <li><a href="Tutorials.html">Tutorials</a></li>
                 <li><a href="https://www.instagram.com/screwsandcircuits/?hl=en"  target="_blank">Instagram</a></li>
                 <li><a href="index.html #contact">Contact Us</a></li>
@@ -64,4 +64,5 @@ document.addEventListener('click', function(event) {
 // Stop propagation on X button click to prevent double-trigger
 document.querySelector('#X').addEventListener('click', function(e) {
     e.stopPropagation();
+
 });
