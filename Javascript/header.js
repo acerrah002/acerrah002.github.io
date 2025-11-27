@@ -11,7 +11,7 @@ const HeaderHTML = `
                 <li><a href="Pc_builds.html">Pc Builds</a></li>
                 <li><a href="Tutorials.html">Tutorials</a></li>
                 <li><a href="https://www.instagram.com/screwsandcircuits/?hl=en"  target="_blank">Instagram</a></li>
-                <li><a href="index.html #contact">Contact Us</a></li>
+                <li><a href="#contact">Contact Us</a></li>
               </ul>
               <ul>
                 <li class="navbarlinks"><a href="index.html">Home</a></li>
@@ -66,3 +66,4 @@ document.querySelector('#X').addEventListener('click', function(e) {
     e.stopPropagation();
 
 });
+
