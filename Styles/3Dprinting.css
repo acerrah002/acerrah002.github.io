@@ -1,0 +1,118 @@
+
+.container {
+  opacity: 1;
+}
+
+.grid-item {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  background-color: white;
+  color: black;
+  gap: 20px;
+  align-items: center;
+}
+
+ul{
+  list-style-type: none;
+}
+
+.description {
+  opacity: 0;
+  display: none;
+}
+
+.colourSelection button {
+  width: 40px;
+  height: 40px;
+  margin: auto;
+  border-radius: 0;
+  border: 1px solid black;
+  cursor: pointer;
+  transition: transform 0.1s ease-in-out;
+}
+
+.colourSelection button:active {
+  transform: scale(0.9);
+}
+
+.materialSelection button:active{
+  transform: scale(0.9);
+}
+.grid-item:hover {
+  transform: translateY(-5px);
+}
+
+.ThreeDPrintmenu {
+  grid-template-columns: repeat(3, 1fr);
+  display: grid;
+}
+
+.grid-item {
+  margin: 5px;
+}
+
+.grid-item h2 {
+  margin-top: 5px;
+  font-size: 30px;
+  color: #333;
+}
+
+.grid-item:hover .description{
+  opacity: 1;
+  display: block;
+}
+
+.THREEDPRINTFORM input{
+  font-size: 20px;
+}
+
+.Modelimg {
+  position: relative;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  max-width: 200px;
+  height: auto;
+  overflow: hidden;
+}
+
+.Modelimg img {
+  width: auto;
+  height: 150px;
+  display: none;
+}
+
+.Modelimg img:first-child {
+  display: block;
+}
+
+.Modelprev, .Modelnext {
+  cursor: pointer;
+  position: absolute;
+  top: 40%;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  padding: 10px;
+  border: none;
+  font-size: 18px;
+  transform: translateY(-50%);
+}
+
+.Modelprev {
+  left: 5px;
+}
+
+.Modelnext {
+  right: 5px;
+}
+@media (max-width: 768px) {
+  .ThreeDPrintmenu {
+    grid-template-columns: repeat(1, 1fr);
+    display: grid;
+    
+  }
+}
+

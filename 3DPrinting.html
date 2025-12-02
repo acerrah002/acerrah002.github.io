@@ -26,22 +26,66 @@
   <section class="hero" id="home">
     <h2>Welcome to ScrewsandCircuits</h2>
     <p>Currently in progress</p>
-  </section>
- 
-
-  <div id="ContactForm-placeholder"></div>
-  <div id="Footer-placeholder"></div>
+    <!-- Product Section -->
+  <section class="ThreeDPrintmenu">
+    <!-- Submenu Items -->
+    <div class="grid-item" onclick="openSlider(this, 'Sno')">
+      <div class="Modelimg">
+      <img src="/images/pcparts.png" alt="Snowman figures">
+      <img src="/images/logo.png" alt="Snowman figures">
+      <img src="/images/logo.png" alt="Snowman figures">
+      </div>
+      <h2>Snowman figures</h2>
+      <div class="descriptionContainer"></div>
+    </div>
   
 
+    <div class="grid-item" onclick='openSlider(this, "Miniature Model")'>
+      <div class="Modelimg">
+      <img src="/images/logo.png" alt="Miniature">
+      </div>
+      <h2>Miniature</h2>
+      <div class="descriptionContainerNoPrevNext"></div>
+    </div>
 
-  <script defer src="/Javascript/Carouseljs.js"></script>
-  <script defer src="/Javascript/ContactForm.js"></script>
+    <div class="grid-item" onclick='openSlider(this, "Bears")'>
+      <div class="Modelimg">
+      <img src="/images/logo.png" alt="Bears">
+      <img src="/images/logo.png" alt="Bears">
+      <img src="/images/logo.png" alt="Bears">
+      <img src="/images/logo.png" alt="Bears">
+      </div>
+      <h2>Bears</h2>
+      <div class="descriptionContainer"></div>
+    </div>
+   
+    <div class="grid-item" onclick='openSlider(this, "Custom")'>
+      <div class="Modelimg">
+      <img src="/images/logo.png" alt="Custom">
+      </div>
+      <h2>Custom</h2>
+      <div class="descriptionContainerNoPrevNext"></div>
+      <button style="display:none;"></button>
+    </div>
+
+
+
+
+  </section>
+  
+  <div id="3Dprintedemail-placeholder"></div>
+  <div id="Footer-placeholder"></div>
+  
+  
+
+  <script defer src="/Javascript/3DPrinting.js"></script>
+  <script defer src="/Javascript/purchaseform3dprinting.js"></script>
   <script defer src="/Javascript/footer.js"></script>
   <script defer src="/Javascript/header.js"></script>
   <script defer src="/Javascript/javascript.js"></script>
   <link rel="stylesheet" href="/Styles/Header.css">
   <link rel="stylesheet" href="/Styles/homeandrest.css">
-  <link rel="stylesheet" href="/Styles/stylesforcarasoul.css">
+  <link rel="stylesheet" href="/Styles/3Dprinting.css">
   
 </body>
   </body>
