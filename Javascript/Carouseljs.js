@@ -14,17 +14,22 @@ const classes = [
   {
     image: "/images/computer_repair (1).jpg",
     description: "PC/Laptop Maintenance & Repair.",
-    link: "PC_Repair.html"
+    link: "maintence.html"
   },
   {
     image: "/images/fob_keys (1).jpg",
     description: "Precision key fob cloning for all models.",
-    link: "Fob_Keys.html"
+    link: "fobkeys.html"
   },
   {
     image: "/images/esp32 (1).jpg",
     description: "Robotics projects for innovative automation solutions.",
     link: "Robotics.html"
+  },
+  {
+    image: "/images/Thumbnail2.png",
+    description: "Tutorials for 3Dmodeling, 3D Printing Etc.",
+    link: "Tutorials.html"
   }
 ];
 
