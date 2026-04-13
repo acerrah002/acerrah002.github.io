@@ -15,14 +15,14 @@
     margin: 40px auto;      
     max-width: 100%;
     padding: 10px;            
-    width: max-content;        
+    width: max-content;  
+    z-index: 0;      
 }
 
 .scrollbtn{
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    z-index: 3;
     border-radius: 25px;
     padding: 5px;
     font-size: 20px;
@@ -40,7 +40,6 @@
 
 
 #imageslide{
-    z-index: 2;
     position: relative;
     background-color: rgb(255, 255, 255);
     border-radius: 25px;

@@ -90,12 +90,3 @@ document.addEventListener('click', function(event) {
         hideSidebar();
     }
 });
-
-
-
-
-
-
-
-
-
