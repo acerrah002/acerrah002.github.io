@@ -177,8 +177,6 @@ input[type=submit]:hover {
 
 
 .footer a img{
-    width: 40px;
-    height: 40px;
     filter: invert(100%);
 }
 
