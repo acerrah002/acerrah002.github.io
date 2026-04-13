@@ -1,28 +1,48 @@
+const sidebarLinks = [
+    { name: "X", href: "#", id: "X", onClick: "hideSidebar()" }, 
+    { name: "Home Page", href: "index.html" },
+    { name: "Fob keys", href: "fobkeys.html" },
+    { name: "Maintenance & Repair", href: "maintenance.html" },
+    { name: "3DPrinting", href: "3DPrinting.html" },
+    { name: "Pc Builds", href: "Pc_builds.html" },
+    { name: "Tutorials", href: "Tutorials.html" },
+    { name: "Facebook", href: "https://www.facebook.com/p/ScrewsCircuits-61577351262288/" },
+    { name: "Instagram", href: "https://www.instagram.com/screwsandcircuits/?hl=en" },
+    { name: "YouTube", href: "https://www.youtube.com/@ScrewsandCircuits" }
+];
+
+const navbarLinks = [
+    { name: "Home", href: "index.html" },
+    { name: "Services", href: "#Services" },
+    { name: "Contact", href: "#contact" }
+];
+
+
+const generateListItems = (links, isNavbar = false) => {
+    return links.map(link => {
+        const clickAttr = link.onClick ? `onclick="${link.onClick}"` : `onclick="hideSidebar()"`;
+        const classAttr = isNavbar ? 'class="navbarlinks"' : '';
+        const idAttr = link.id ? `id="${link.id}"` : '';
+        
+        return `<li ${classAttr} ${clickAttr}><a href="${link.href}"><p ${idAttr}>${link.name}</p></a></li>`;
+    }).join('');
+};
+
+
 const HeaderHTML = `
-  <img src="/images/logo.png" alt="ScrewsandCircuits Logo" id="logo">
-         <div>
-          <nav>
+    <div id="HeaderDivTest">
+        <nav>
             <ul class="sidebar">
-                <li onclick=hideSidebar()><a href="#"><p id="X">X</p></a></li>
-                <li onclick="hideSidebar()"><a href="index.html">Home Page</a></li>
-                <li onclick=hideSidebar()><a href="fobkeys.html" >Fob keys</a></li>
-                <li onclick=hideSidebar()><a href="maintenance.html" >Maintenance & Repair</a></li>
-                <li onclick=hideSidebar()><a href="3DPrinting.html" >3DPrinting</a></li>
-                <li onclick=hideSidebar()><a href="Pc_builds.html">Pc Builds</a></li>
-                <li onclick=hideSidebar()><a href="Tutorials.html">Tutorials</a></li>
-                <li><a href="https://www.facebook.com/p/ScrewsCircuits-61577351262288/" target="_blank">Facebook</a></li>
-                <li><a href="https://www.instagram.com/screwsandcircuits/?hl=en"  target="_blank">Instagram</a></li>
-                <li onclick=hideSidebar()><a href="#contact">Contact Us</a></li>
-              </ul>
-              <ul>
-                <li class="navbarlinks" onclick=hideSidebar()><a href="index.html">Home</a></li>
-                <li class="navbarlinks" onclick=hideSidebar()><a href="#Services">Services</a></li>
-                <li class="navbarlinks" onclick=hideSidebar()><a href="#contact">Contact</a></li>
-                <li onclick=showSidebar() ><a href="#" ><div class="hamburger"><span></span><span></span><span></span></div></a></li>
-              </ul>
-            </nav>
-        </div>
+                ${generateListItems(sidebarLinks)}
+            </ul>
+            <ul>
+                ${generateListItems(navbarLinks, true)}
+                <li onclick="showSidebar()"><a href="#"><div class="hamburger"><span></span><span></span><span></span></div></a></li>
+            </ul>
+        </nav>
+    </div>
 `;
+
 document.addEventListener('DOMContentLoaded', () => {
   console.log('hamburg.js loaded');
   const contentArea = document.getElementById('header-placeholder');
@@ -70,6 +90,11 @@ document.addEventListener('click', function(event) {
         hideSidebar();
     }
 });
+
+
+
+
+
 
 
 
