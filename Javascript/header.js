@@ -18,15 +18,15 @@ const navbarLinks = [
 ];
 
 
-const generateListItems = (links, isNavbar = false) => {
-    return links.map(link => {
+
+function generateListItems(links, isNavbar = false) {
+    return links.map(function(link) {
         const clickAttr = link.onClick ? `onclick="${link.onClick}"` : `onclick="hideSidebar()"`;
         const classAttr = isNavbar ? 'class="navbarlinks"' : '';
         const idAttr = link.id ? `id="${link.id}"` : '';
-        
         return `<li ${classAttr} ${clickAttr}><a href="${link.href}"><p ${idAttr}>${link.name}</p></a></li>`;
     }).join('');
-};
+}
 
 
 const HeaderHTML = `
@@ -37,30 +37,43 @@ const HeaderHTML = `
             </ul>
             <ul>
                 ${generateListItems(navbarLinks, true)}
-                <li onclick="showSidebar()"><a href="#"><div class="hamburger"><span></span><span></span><span></span></div></a></li>
+                <li onclick="showSidebar()">
+                    <a href="#">
+                        <div class="hamburger">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                    </a>
+                </li>
             </ul>
         </nav>
     </div>
 `;
 
-document.addEventListener('DOMContentLoaded', () => {
-  console.log('hamburg.js loaded');
-  const contentArea = document.getElementById('header-placeholder');
-  if (!contentArea) {
-    console.warn('header-placeholder not found in DOM');
-    return;
-  }
-  contentArea.innerHTML = HeaderHTML;
+function initializeHeader() {
+    console.log('hamburg.js loaded');
+    
+    const contentArea = document.getElementById('header-placeholder');
+    if (!contentArea) {
+        console.warn('header-placeholder not found in DOM');
+        return;
+    }
+    
+    contentArea.innerHTML = HeaderHTML;
 
-const xButton = document.querySelector('#X');
-   if (xButton) {
-      xButton.parentNode.addEventListener('click', function(e) {
-      e.preventDefault(); 
-      e.stopPropagation();
-     hideSidebar();
-  });
-  }
-});
+    const xButton = document.querySelector('#X');
+    if (xButton) {
+        xButton.parentNode.addEventListener('click', function(e) {
+            e.preventDefault(); 
+            e.stopPropagation();
+            hideSidebar();
+        });
+    }
+}
+
+
+document.addEventListener('DOMContentLoaded', initializeHeader);
 
 let sidebarVisible = false;
 

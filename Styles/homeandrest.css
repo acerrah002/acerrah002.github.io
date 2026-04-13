@@ -167,18 +167,17 @@ input[type=submit]:hover {
     transition: color 0.3s;
 }
 
-.footer a:hover {
-    color: #c8235d;
+.footer a:hover{
+    color: red;
 }
 
-.footer i {
-    margin-right: 8px;
-    color: #04AA6D;
+.footer a img:hover {
+    filter: invert(27%) sepia(100%) saturate(7414%) hue-rotate(359deg) brightness(94%) contrast(117%);
 }
 
-.footer p b {
-    font-size: 16px;
-    margin-bottom: 10px;
+
+.footer a img{
+    filter: invert(100%);
 }
 
 @keyframes fade {
